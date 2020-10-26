@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>My Attraction Park</title>
+
+        <!-- Here goes some styles -->
+
+        <!-- Load index.js here -->
+        <script src="./src/index.js" type="module"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <article parcInfo>
+                <header>
+                    <h1 parcTitle></h1>
+                </header>
+                    <blockquote class="description" parcDescription>
+                    </blockquote>
+
+                    <!-- List of attactions -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Title</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <!-- Attraction rows -->
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">
+                                    <form id="handle-attraction">
+                                        <div formCaption class="form-caption"></div>
+
+                                        <div class="form-group">
+                                            <input type="text" name="title" placeholder="Nom de l'attraction">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea name="description" placeholder="Description"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="difficulty" size="1">
+                                                <option value="0">Niveau de difficulté</option>
+                                                <option value="1">Faible</option>
+                                                <option value="2">Moyen</option>
+                                                <option value="3">Difficile</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary">Ajouter</button>
+                                        </div>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+            </article>
+
+            <!-- Here goes the update for updating parc infos -->
+        </div>
+    </body>
+
+</html>
