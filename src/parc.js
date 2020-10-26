@@ -7,7 +7,7 @@ export default class Parc {
         this.description = description
 
         this.attractions = []
-
+        // Appeler la méthode onSubmit de l'objet courant
         this.onSubmit() // Placer le gestionnaire d'événement sur le submit
     }
 
@@ -18,6 +18,9 @@ export default class Parc {
 
     addAttraction(attraction){
         this.attractions.push(attraction)
+
+        // Add the attraction.render to the tbody element
+        document.querySelector('tbody').append(attraction.render())
     }
 
     setDescription(description) {
@@ -54,6 +57,10 @@ export default class Parc {
 
                 console.log(attractionNameValue, attractionDescriptionValue, attractionDifficultyValue)
 
+                // Reset fields
+                attractionName.value = ''
+                attractionDescription.value = ''
+                attractionDifficulty.options.selectedIndex = 0
             }
         )
     }

@@ -21,4 +21,29 @@ export default class Attraction {
             this.difficultyLevel = 1
         }
     }
+
+    render() {
+        const tr = document.createElement('tr')
+
+        // First column :
+        const td1 = document.createElement('td')
+        td1.innerHTML = `&nbsp;` // Html Entity & (Non Breakable SPace); &euro; &copy; &lt;
+
+        // Seconde column : title
+        const td2 = document.createElement('td')
+        td2.textContent = this.name
+
+        // third column
+        const td3 = document.createElement('td')
+        td3.innerHTML = `&nbsp;`;
+
+        tr.append(td1)
+        tr.append(td2)
+        tr.append(td3)
+
+        return tr
+    }
 }
+
+Un texte très long avec plein&nbsp;de mots 
+de partout et qui s'étale sur plein de lignes
